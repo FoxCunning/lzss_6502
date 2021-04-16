@@ -85,7 +85,7 @@ dounpack:
 	; This is if we work with a known, constant uncompressed size
 	cmp end_hi
 	bne _start
-	; No need to check low byte if it's 1KB aligned (e.g. $8000, $7200...)
+	; No need to check low byte if it's 256B-aligned (e.g. $8000, $7200...)
 	; lda dst_lo
 	; cmp end_lo
 	; bne _start 
